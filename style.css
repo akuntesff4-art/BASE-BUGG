@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#00e0ff;font-family:'Orbitron',sans-serif;min-height:100vh;overflow:hidden;position:relative;
+  background-image:radial-gradient(circle at 10% 20%, rgba(0,255,255,0.12) 0%, transparent 30%),
+                    radial-gradient(circle at 90% 80%, rgba(0,100,255,0.12) 0%, transparent 30%);}
+.container{max-width:390px;margin:0 auto;padding:20px 15px 100px;display:flex;flex-direction:column;gap:25px;
+  min-height:100vh;justify-content:center;align-items:center;}
+.card{background:rgba(5,10,35,0.9);border:1px solid rgba(0,255,255,0.5);border-radius:18px;padding:24px;text-align:center;width:100%;
+  backdrop-filter:blur(12px);box-shadow:0 0 35px rgba(0,255,255,0.4);}
+.avatar{width:92px;height:92px;border:4px solid #00ffff;border-radius:50%;margin:0 auto 14px;
+  box-shadow:0 0 40px #00ffff, inset 0 0 20px rgba(0,255,255,0.3);object-fit:cover;}
+.username{font-size:25px;font-weight:900;color:#00ffff;text-shadow:0 0 10px #00ffff;}
+.tag{color:#00ffff;opacity:0.75;font-size:13px;margin:5px 0;text-shadow:0 0 6px #00ffff;}
+.role{font-size:12px;color:#00ccff;text-shadow:0 0 8px #00ccff;}
+.glow-text{color:#00ffff;text-shadow:0 0 12px #00ffff;font-weight:700;letter-spacing:1.5px;font-size:16px;}
+input,select{width:100%;padding:15px;margin:12px 0;background:rgba(0,20,60,0.8);border:1px solid #00ffff;
+  border-radius:12px;color:#fff;font-size:15px;box-shadow:0 0 20px rgba(0,255,255,0.4);}
+button{width:100%;padding:17px;margin-top:20px;background:linear-gradient(45deg,#00ffff,#0066ff);
+  border:none;border-radius:12px;color:#000;font-size:18px;font-weight:900;cursor:pointer;
+  box-shadow:0 0 40px rgba(0,255,255,0.7);transition:all 0.3s;}
+button:hover{transform:scale(1.05);box-shadow:0 0 60px #00ffff;}
+.copyright{position:fixed;bottom:15px;left:0;width:100%;text-align:center;color:#00ffff;font-size:11px;letter-spacing:2px;opacity:0.7;
+  text-shadow:0 0 10px #00ffff;z-index:10;}
+.chaos{position:fixed;top:0;left:0;width:100%;height:100%;background:#000;z-index:9999;display:none;
+  flex-direction:column;justify-content:center;align-items:center;color:#f00;font-size:38px;text-align:center;
+  animation:glitch 0.08s infinite;}
+.chaos.active{display:flex}
+.scanline{position:absolute;top:-100%;width:100%;height:10px;background:linear-gradient(transparent,#0ff,transparent);
+  animation:scan 2.5s linear infinite;}
+@keyframes glitch{0%,100%{text-shadow:5px 0 #0ff,-5px 0 #f00}50%{text-shadow:-5px 0 #0ff,5px 0 #f00}}
+@keyframes scan{0%{top:-100%}100%{top:100%}}
